@@ -6,7 +6,7 @@ https://github.com/AnaLopezP/blackjack/edit/main/README.md
 En esta tarea hemos creado el juego BlackJack, en una partida del jugador frente a la máquina.
 El diagrama de flujo que tenemos en nuestro codigo es el siguiente:
 
-![diagrama de flujo Blackjack](Diagrama_de_flujo_Blackjack.JPG)
+![diagrama de flujo blackjack](Diagrama_de_flujo_Blackjack.JPG)
 
 ```
 import random
