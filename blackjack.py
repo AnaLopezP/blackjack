@@ -20,6 +20,18 @@ def crupier(baraja, puntuacion_crupier):
 
     return puntuacion_crupier
 
+def player(baraja, puntuacion_jugador):
+    print("¿Quieres una carta? ¿y o n?")
+    respuesta = str(input())
+    while respuesta == "y":
+        nueva_carta_jugador = random.choice(baraja)
+        print(nueva_carta_jugador)
+        puntuacion_jugador = puntuacion_jugador + nueva_carta_jugador
+        print("Tu nueva puntuacion es: " + str(puntuacion_jugador))
+        print("¿Quieres otra carta? ¿y o n?")
+        respuesta = str(input())
+    print("El jugador se planta")
+    return puntuacion_jugador
 
 
 jugador = preparacion(baraja)
@@ -27,4 +39,5 @@ print("Esta es tu puntuación jugador : " + str(jugador))
 banca = preparacion(baraja)
 print("Esta es tu puntuación banca: " + str(banca))
 
+jugador = player(baraja, jugador)
 banca = crupier(baraja, banca)
