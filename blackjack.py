@@ -1,6 +1,6 @@
 
 import random
-baraja = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+baraja = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 #funcion para repartir cartas
 def preparacion(baraja):
@@ -46,27 +46,26 @@ print("Esta es tu puntuación banca: " + str(banca))
 
 #Turno de jugador
 jugador = player(baraja, jugador)
-if jugador > 21:
-    print("Has perdido, te has pasado de 21 con: " + str(jugador))
-else:
-    print("Te plantas con: " + str(jugador))
-
-
 
 #Turno de la banca
 banca = crupier(baraja, banca)
-if banca > 21:
-    print("He perdido, me he pasado de 21 con: " + str(banca))
-else:
-    print("Me planto con: " + str(banca))
 
 #decision de quien gana
 if banca > 21 and jugador > 21:
     print("Como nos hemos pasado, se queda en tablas.")
-else:
+elif banca < 21 and jugador < 21:
     if banca > jugador:
         print("He ganado")
     elif banca == jugador:
         print("Hemos quedado empate")
     else:
         print("Me has superado. Has ganado, felicidades.")
+else:
+    if jugador > 21:
+        print("Has perdido, te has pasado de 21 con: " + str(jugador))
+    else:
+        print("Te plantas con: " + str(jugador))
+    if banca > 21:
+        print("He perdido, me he pasado de 21 con: " + str(banca))
+    else:
+        print("Me planto con: " + str(banca))
