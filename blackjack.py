@@ -38,11 +38,11 @@ def player(baraja, puntuacion_jugador):
 
 # cartas para eljugador
 jugador = preparacion(baraja)
-print("Esta es tu puntuación jugador : " + str(jugador))
+print("La puntuacion del jugador es: " + str(jugador))
 
 #cartas para la banca
 banca = preparacion(baraja)
-print("Esta es tu puntuación banca: " + str(banca))
+print("La puntuacion del crupier es: " + str(banca))
 
 #Turno de jugador
 jugador = player(baraja, jugador)
@@ -53,7 +53,7 @@ banca = crupier(baraja, banca)
 #decision de quien gana
 if banca > 21 and jugador > 21:
     print("Como nos hemos pasado, se queda en tablas.")
-elif banca < 21 and jugador < 21:
+elif banca <= 21 and jugador <= 21:
     if banca > jugador:
         print("He ganado")
     elif banca == jugador:
@@ -64,8 +64,8 @@ else:
     if jugador > 21:
         print("Has perdido, te has pasado de 21 con: " + str(jugador))
     else:
-        print("Te plantas con: " + str(jugador))
+        print("Te plantas con: " + str(jugador) + ". Has ganado")
     if banca > 21:
         print("He perdido, me he pasado de 21 con: " + str(banca))
     else:
-        print("Me planto con: " + str(banca))
+        print("Me planto con: " + str(banca) + ". He ganado")
